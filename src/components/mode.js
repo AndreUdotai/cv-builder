@@ -39,7 +39,7 @@ class Mode extends React.Component {
                 <div className='row mt-2'>
                     <div className='col-12 text-center'>
                         <button
-                            onClick={this.setMountTrue}
+                            onClick={this.setMountFalse}
                             type='button'
                             id='workingMode'
                             className='btn btn-secondary mr-2'
@@ -47,7 +47,7 @@ class Mode extends React.Component {
                             Editor Mode
                         </button>
                         <button
-                            onClick={this.setMountFalse}
+                            onClick={this.setMountTrue}
                             type='button'
                             id='previewMode'
                             className='btn btn-secondary ml-2'
@@ -56,7 +56,7 @@ class Mode extends React.Component {
                         </button>
                     </div>
                 </div>
-                {this.state.mount ? <Editor /> : <Preview />}
+                {this.state.mount ? <Preview /> : <Editor /> }
             </div>
         );
     }
