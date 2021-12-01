@@ -9,7 +9,21 @@ class Mode extends React.Component {
 
         this.state = {
             mount: false,
+            firstName: '',
+            lastName: '',
         };
+    }
+
+    captureFirstName = (e) => {
+        this.setState({
+            firstName: e.target.value,
+        })
+    }
+
+    captureLastName = (e) => {
+        this.setState({
+            lastName: e.target.value,
+        })
     }
 
     setMountTrue = () => {
@@ -56,7 +70,7 @@ class Mode extends React.Component {
                         </button>
                     </div>
                 </div>
-                {this.state.mount ? <Preview /> : <Editor /> }
+                {this.state.mount ? <Preview firstName={this.state.firstName} lastName={this.state.lastName}/> : <Editor captureFirstName={this.captureFirstName} captureLastName={this.captureLastName} /> }
             </div>
         );
     }

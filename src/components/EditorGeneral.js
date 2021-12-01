@@ -9,19 +9,25 @@ class EditorGeneral extends React.Component {
                     <div className='col'>
                         <label htmlFor='firstName'>First Name</label>
                         <input
+                            onChange={this.props.captureFirstName}
                             type='text'
                             className='form-control'
                             id='firstName'
                             placeholder='First Name'
+                            name='fistName'
+                            value={this.props.firstName}
                         />
                     </div>
                     <div className='col'>
                         <label htmlFor='lastName'>Last Name</label>
                         <input
+                            onChange={this.props.captureLastName}
                             type='text'
                             className='form-control'
                             id='lastName'
                             placeholder='Last name'
+                            name='lastName'
+                            value={this.props.lastName}
                         />
                     </div>
                 </div>

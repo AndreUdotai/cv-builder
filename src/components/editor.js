@@ -12,7 +12,7 @@ class Editor extends React.Component {
             <div className='row mt-4 mb-4 w-75 mx-auto'>
                 <div className='col-12' id='editor'>
                     <form>
-                        < EditorGeneral />
+                        < EditorGeneral captureFirstName={this.props.captureFirstName} captureLastName={this.props.captureLastName} />
                         < EditorExperiences />
                         < EditorEducation />
                         < EditorSkills />

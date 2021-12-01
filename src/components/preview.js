@@ -8,7 +8,7 @@ class Preview extends React.Component {
         return (
             <div className='row my-4 w-75 mx-auto'>
                 <div className='col-12' id='preview'>
-                    <PreviewHeader />
+                    <PreviewHeader firstName={this.props.firstName} lastName={this.props.lastName} />
                     <PreviewBody />
                 </div>
             </div>
